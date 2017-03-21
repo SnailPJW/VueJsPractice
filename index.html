@@ -47,6 +47,17 @@
     </div>
     <!--範例7...........................................-->
     <h2>Ex 07</h2>
+    <div id="app-7">
+        <ol>
+            <!-- 现在我们为每个todo-item提供待办项对象    -->
+            <!-- 待办项对象是变量，即其内容可以是动态的 -->
+            <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+    <!-- 创建一个 todo-item 组件的实例 -->
+    <!--<ol>
+        <todo-item></todo-item>
+    </ol>-->
     <!--範例8...........................................-->
 </body>
 <script>
@@ -94,6 +105,28 @@ var app6 = new Vue({
     data: {
         message: 'Hello Vue!'
     }
+})
+
+// 定义名为 todo-item 的新组件
+/*Vue.component('todo-item', {
+  template: '<li>这是个待办项</li>'
+})*/
+Vue.component('todo-item', {
+  // todo-item 组件现在接受一个
+  // "prop"，类似于一个自定义属性
+  // 这个属性名为 todo。
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { text: '蔬菜' },
+      { text: '奶酪' },
+      { text: '随便其他什么人吃的东西' }
+    ]
+  }
 })
 </script>
 </html>
