@@ -11,19 +11,20 @@
 <body>
     <!--範例1...........................................-->
     <div id="app">
-            {{ message }}
-        </div>
+        <h1>{{ message }}</h1>
+        <input type="text" v-model="message">
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
-        <script>
-            var data = {
-                message:'Hello World!'
-            }
-            new Vue({
-                el:'#app',
-                data:data
-            });
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script>
+        var data = {
+            message:'Hello World!'
+        }
+        new Vue({
+            el:'#app',
+            data:data
+        });
+    </script>
     <!--範例2...........................................-->
    
     <!--範例3...........................................-->
