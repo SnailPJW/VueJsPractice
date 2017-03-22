@@ -55,9 +55,23 @@
         </form>
     </div>
     <!--範例6...........................................-->
-
+    <h1>Ex 06</h1>
+    <div id="app6">
+        <!--<span v-for="n in 10">{{ n }}</span>-->
+        <div v-for="i in 9">
+            <h3>{{ i }}</h3>
+            <div v-for="j in 9">{{ i }} x {{ j }}={{ i*j }}</div>
+        </div>
+    </div>
     <!--範例7...........................................-->
-   
+    <h1>Ex 07</h1>
+    <div id="app7">
+        <ul>
+            <li v-for="item in items">
+            {{ item.message }}
+            </li>
+        </ul>
+    </div>
 </body>
  <script>
     var data = {
@@ -102,6 +116,9 @@
                 alert("here I am!");
             }
         }
+    });
+    var app6 = new Vue({
+        el:'#app6'
     });
 </script>
 </html>
