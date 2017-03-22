@@ -84,7 +84,8 @@
     <!--範例9...........................................-->
     <h1>Ex 09</h1>
     <div id="app9">
-        <div v-bind:style="{ color: myColor, fontSize: myFontSize + 'px' }">123</div>
+        <div v-bind:style="myStyle">123</div>
+        <!--<div v-bind:style="{ color: myColor, fontSize: myFontSize + 'px' }">123</div>-->
     </div>
     <!--範例10...........................................-->
     <h1>Ex 10</h1>
@@ -160,8 +161,10 @@
     var app9 = new Vue({
         el:'#app9',
         data:{
-            myColor: 'red',
-            myFontSize: 30
+            myStyle:{
+                color: 'red',
+                fontSize: '30px'
+            }
         }
     });
 </script>
