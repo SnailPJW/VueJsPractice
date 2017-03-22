@@ -83,6 +83,9 @@
         </div>
     <!--範例9...........................................-->
     <h1>Ex 09</h1>
+    <div id="app9">
+        <div v-bind:style="{ color: myColor, fontSize: myFontSize + 'px' }">123</div>
+    </div>
     <!--範例10...........................................-->
     <h1>Ex 10</h1>
 </body>
@@ -152,6 +155,13 @@
             { message: '中山區' },
             { message: '大同區' }
         ]
+        }
+    });
+    var app9 = new Vue({
+        el:'#app9',
+        data:{
+            myColor: 'red',
+            myFontSize: 30
         }
     });
 </script>
