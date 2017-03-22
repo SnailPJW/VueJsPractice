@@ -37,6 +37,7 @@
     <!--範例3...........................................-->
     <h1>Ex 03</h1>
     <div id="app3">
+        <p>目前以點擊：{{count}}次</p>
         <input type="submit" value="立即送出" v-on:click="clickme">
     </div>
     <!--範例4...........................................-->
@@ -60,10 +61,13 @@
     });
     var app3 = new Vue({
         el:'#app3',
-
+        data:{
+            count:0
+        },
         methods:{
             clickme: function(){
-                alert("here I am!");
+                //alert("here I am!");
+                this.count += 1;
             }
         }
     });
