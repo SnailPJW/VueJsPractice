@@ -7,6 +7,16 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     
     <title>VueJS Web</title>
+    <style>
+        .active{
+        color:red;
+        font-size: 30px;
+        }
+        .normal{
+        color:green;
+        font-size: 30px;
+        }
+    </style>
 </head>
 <body>
     <!--範例1...........................................-->
@@ -89,6 +99,9 @@
     </div>
     <!--範例10...........................................-->
     <h1>Ex 10</h1>
+    <div id="app10">
+        <div v-bind:class="{ active: myCheck , normal:myCheck2 }">123</div>
+    </div>
 </body>
  <script>
     var data = {
@@ -167,5 +180,12 @@
             }
         }
     });
+    var app10 = new Vue({
+                el:'#app10',
+                data:{
+                   myCheck: false,
+                   myCheck2: true
+                }
+            });
 </script>
 </html>
