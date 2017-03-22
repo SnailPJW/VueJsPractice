@@ -72,6 +72,19 @@
             </li>
         </ul>
     </div>
+    <!--範例8...........................................-->
+    <h1>Ex 08</h1>
+    <div id="app8">
+            <ul>
+              <li v-for="(item, index) in items">
+                {{ parentMessage }} - {{ index }} - {{ item.message }}
+              </li>
+            </ul>
+        </div>
+    <!--範例9...........................................-->
+    <h1>Ex 09</h1>
+    <!--範例10...........................................-->
+    <h1>Ex 10</h1>
 </body>
  <script>
     var data = {
@@ -128,6 +141,17 @@
                 { message: 'banana' },
                 { message: 'Coconut' }
             ]
+        }
+    });
+    var app8 = new Vue({
+        el:'#app8',
+        data: {
+        parentMessage: '台北市',
+        items: [
+            { message: '中正區' },
+            { message: '中山區' },
+            { message: '大同區' }
+        ]
         }
     });
 </script>
