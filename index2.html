@@ -25,6 +25,8 @@
         <h1 class="error">{{ score }}分</h1>
         <div v-show="score">
             <p v-if="score >= 6">Vue.js so easy</p>
+            <p v-if="score < 0">不能有負數!!!</p>
+            <p v-if="score > 10">最高10分啦!!!</p>
             <p v-else>still learning Vue.js</p>
         </div>
         <p>你覺得vue.js簡單嗎？請輸入1~10分</p>
